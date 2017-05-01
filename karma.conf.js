@@ -19,7 +19,7 @@ module.exports = function karmaConfig(config) {
     ],
     reporters: ['spec'],
 
-    files: [// Grab all files in the app folder that contain .spec.
+    files: [
       {
         pattern: 'karma.shim.js',
         watched: false
@@ -30,10 +30,12 @@ module.exports = function karmaConfig(config) {
       'karma.shim.js': ['webpack', 'sourcemap']
     },
 
-    browsers: [// 'PhantomJS'
-      'Chrome'],
+    browsers: [
+      'PhantomJS'
+      // 'Chrome'
+    ],
 
-    singleRun: true,
+    singleRun: false,
     colors: true,
     concurrency: Infinity,
     logLevel: config.LOG_INFO,
