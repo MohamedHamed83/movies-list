@@ -3,7 +3,7 @@
 
 import 'angular';
 import 'angular-mocks/angular-mocks';
-
+import 'angular-resource';
 var appContext = require.context('./src', true, /\.spec\.js/);
 
 appContext
