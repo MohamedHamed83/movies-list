@@ -55,10 +55,10 @@ module.exports = function makeWebpackConfig() {
               emitError: false,
               fix: true,
               // default value
-              formatter: require("eslint/lib/formatters/stylish"),
+              formatter: require('eslint/lib/formatters/stylish'),
 
               // community formatter
-              formatter: require("eslint-friendly-formatter")
+              formatter: require('eslint-friendly-formatter')
             }
           }
         ],
@@ -158,7 +158,7 @@ module.exports = function makeWebpackConfig() {
   ];
 
   config.devServer = {
-    contentBase: './src/public',
+    contentBase: './src',
     stats: 'minimal'
   };
 

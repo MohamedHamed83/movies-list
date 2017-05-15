@@ -1,7 +1,6 @@
-angular
-    .module('omdb', [])
+angular.module('omdb', [])
     .factory('omdbApi', ($http, $q) => {
-        var basUrl = 'http://www.omdbapi.com/?'
+        var basUrl = 'http://www.omdbapi.com/?';
         var httpPromise = (url) => {
             var deferred = $q.defer();
             function successCallback(response) {
@@ -17,12 +16,12 @@ angular
         };
         return {
             search: (query) => {
-                return httpPromise(basUrl + 't=' + encodeURIComponent(query));
+                return httpPromise(basUrl + 's=' + encodeURIComponent(query));
             },
             find: (id) => {
                 return httpPromise(basUrl + 'i=' + id);
 
             }
 
-        }
-    })
+        };
+    });

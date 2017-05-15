@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="movieApp" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>movie app</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="page-header">
+                <h1><a href="#/">movieApp</a></h1>
+                <p class="lead">Your Resouce fore Movi Data.</p>
+            </div>
+            <div ng-controller="SearchController as SearchCtrl">
+                <form  class="form-inline-lg" ng-submit="SearchCtrl.search()">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="film title..." ng-model="SearchCtrl.query">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="SearchCtrl.search()">Go!</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div ng-view></div>
+    </div>
+    <hr>
+    <div class="footer">
+        <div class="container">
+            <p>from @MohamedHamed | movie data from http://www.omdbapi.com</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
