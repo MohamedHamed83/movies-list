@@ -21,7 +21,7 @@
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="film title..." ng-model="SearchCtrl.query">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button" ng-click="SearchCtrl.search()">Go!</button>
+                            <button class="btn btn-default" type="button" ng-click="SearchCtrl.search()" ng-keyup="SearchCtrl.keyup()">Go!</button>
                         </span>
                     </div>
                 </form>

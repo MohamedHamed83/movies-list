@@ -1,4 +1,4 @@
-
+import './app';
 import '../services/omdb';
 import './results.controller';
 describe('results controller', () => {

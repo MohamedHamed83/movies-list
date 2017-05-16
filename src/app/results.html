@@ -2,13 +2,13 @@
     <br>
 
     <accordion>
-        <accordion-group ng-repeat="result in results"  is-open="result.open">
+        <accordion-group ng-repeat="result in results" is-open="result.open">
             <accordion-heading>
-               <strong> {{result.Title}} {{result.Year}} </strong><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': result.open, 'glyphicon-chevron-right': !result.open}"></i>
+                <strong> {{result.Title}} {{result.Year}} </strong><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': result.open, 'glyphicon-chevron-right': !result.open}"></i>
             </accordion-heading>
             <div>
                 <h2> {{result.Title}} </h2>
-            <img ng-src={{result.Poster}} />
+                <img ng-src={{result.Poster}} />
                 <p class="lead"> {{result.Year}} </p>
             </div>
 </div>
