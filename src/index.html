@@ -13,15 +13,15 @@
     <div class="header">
         <div class="container">
             <div class="page-header">
-                <h1><a href="#/">movieApp</a></h1>
-                <p class="lead">Your Resouce fore Movi Data.</p>
+                <h1><a href="#/">The App</a></h1>
+                <p class="lead">Testting app.</p>
             </div>
             <div ng-controller="SearchController as SearchCtrl">
                 <form  class="form-inline-lg" ng-submit="SearchCtrl.search()">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="film title..." ng-model="SearchCtrl.query">
+                        <input type="text" class="form-control" placeholder="film title..." ng-model="SearchCtrl.query" ng-keyup="SearchCtrl.keyup()" ng-keydown="SearchCtrl.keydown()">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button" ng-click="SearchCtrl.search()" ng-keyup="SearchCtrl.keyup()">Go!</button>
+                            <button class="btn btn-default" type="button" ng-click="SearchCtrl.search()" >Go!</button>
                         </span>
                     </div>
                 </form>

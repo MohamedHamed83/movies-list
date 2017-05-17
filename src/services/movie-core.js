@@ -35,5 +35,5 @@ angular
                     'authToken': token
                 }
             }
-        })
-    })
+        });
+    });

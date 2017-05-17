@@ -1,20 +1,28 @@
 import 'angular-route';
 import 'angular-ui-bootstrap';
 import '../services/omdb';
+import '../services/movie-core';
+import home from './home.html';
+import homeController from './home.controller';
 import resultsController from './results.controller';
 import searchController from './search.controller';
 import template from './results.html';
 
 const routing = ($routeProvider) => {
 	$routeProvider
-  		.when('/results', {
-    		template : template
-  		})
-  		.otherwise({
-    		redirectTo: '/'
-  		});
+		.when('/', {
+			template: home,
+			controller: 'HomeController'
+		})
+		.when('/results', {
+			template: template
+		})
+		.otherwise({
+			redirectTo: '/'
+		});
 };
-export default angular.module('movieApp', ['ui.bootstrap', 'ngRoute', 'omdb'])
- .controller('ResultsController', resultsController)
-.controller('SearchController',searchController)
-.config(routing).name;
+export default angular.module('movieApp', ['ui.bootstrap', 'ngRoute', 'omdb', 'movieCore'])
+	.controller('ResultsController', resultsController)
+	.controller('SearchController', searchController)
+	.controller('HomeController', homeController)
+	.config(routing).name;

@@ -1,7 +1,10 @@
 // This file is an entry point for angular tests Avoids some weird issues when
 // using webpack + angular.
 
-import './src/vendors';
+import 'angular';
+import 'angular-mocks/angular-mocks';
+import 'angular-resource';
+import 'bootstrap-sass';
 
 var testContext = require.context('./src', true, /\.spec\.js/);
 
