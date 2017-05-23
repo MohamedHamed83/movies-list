@@ -1,5 +1,4 @@
 import './app';
-import './home.controller';
 describe('Home Controller', function() {
 	
 	var results = [
@@ -69,19 +68,19 @@ describe('Home Controller', function() {
 
 	it('should rotate movies every 5 seconds', function() {
 		// should have a default starting movie
-		expect($scope.results.Title).toBe(results[0].Title);
+		expect($scope.result.Title).toBe(results[0].Title);
 		
 		// after 5 seconds, should be next movie
 		$interval.flush(5000);
-		expect($scope.results.Title).toBe(results[1].Title);
+		expect($scope.result.Title).toBe(results[1].Title);
 		
 		// after 5 seconds, should be next movie
 		$interval.flush(5000);
-		expect($scope.results.Title).toBe(results[2].Title);
+		expect($scope.result.Title).toBe(results[2].Title);
 
 		// should go back to start
 		$interval.flush(5000);
-		expect($scope.results.Title).toBe(results[0].Title);
+		expect($scope.result.Title).toBe(results[0].Title);
 
 		expect(omdbApi.find.calls.argsFor(0)).toEqual(['tt0076759']);
     	expect(omdbApi.find.calls.argsFor(1)).toEqual(['tt0080684']);

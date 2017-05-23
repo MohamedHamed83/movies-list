@@ -7,6 +7,7 @@ import homeController from './home.controller';
 import resultsController from './results.controller';
 import searchController from './search.controller';
 import template from './results.html';
+import movieResultDirect from './movieResult.directive';
 
 const routing = ($routeProvider) => {
 	$routeProvider
@@ -25,4 +26,5 @@ export default angular.module('movieApp', ['ui.bootstrap', 'ngRoute', 'omdb', 'm
 	.controller('ResultsController', resultsController)
 	.controller('SearchController', searchController)
 	.controller('HomeController', homeController)
+	.directive('movieResult', movieResultDirect)
 	.config(routing).name;

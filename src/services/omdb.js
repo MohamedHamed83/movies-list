@@ -1,6 +1,6 @@
 angular.module('omdb', [])
     .factory('omdbApi', ($http, $q) => {
-        var basUrl = 'http://www.omdbapi.com/?';
+        var basUrl = 'http://www.omdbapi.com/?apikey=7ecec85&';
         var httpPromise = (url) => {
             var deferred = $q.defer();
             function successCallback(response) {

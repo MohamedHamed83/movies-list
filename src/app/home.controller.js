@@ -4,11 +4,10 @@ const homeController = function($scope, $interval, omdbApi, PopularMovies) {
 		var findMovie = function(id) {	
 			omdbApi.find(id)
         	.then(function(data) {
-          		$scope.results = data;
+          		$scope.result = data;
         	});
         };
 
-		$scope.results = {};
 	
         // Get PopularMovies list
     	var data = ['tt0076759', 'tt0080684', 'tt0086190'];
